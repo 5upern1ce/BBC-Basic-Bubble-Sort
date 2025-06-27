@@ -1,0 +1,24 @@
+      DIM lst1(4)
+      lst1(0)=4
+      lst1(1)=2
+      lst1(2)=3
+      lst1(3)=1
+      lst1(4)=7
+
+      LET switch=0
+      LET counter=5
+
+      WHILE counter > 1
+        FOR sort = 0 TO 3
+          IF lst1(sort) > lst1(sort+1) THEN
+            switch = lst1(sort)
+            lst1(sort) = lst1(sort+1)
+            lst1(sort+1) = switch
+          ENDIF
+        NEXT sort
+        counter -= 1
+      ENDWHILE
+
+      FOR i = 0 TO 4
+        PRINT lst1(i)
+      NEXT
